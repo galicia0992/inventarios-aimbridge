@@ -1,14 +1,16 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import { Outlet } from 'react-router-dom'
+import React from "react";
+import Navbar from "../components/Navbar";
+import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
-    <Navbar></Navbar>
-    <Outlet></Outlet>
+      <div className="d-flex flex-row">
+        <Navbar></Navbar>
+        <Outlet></Outlet>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

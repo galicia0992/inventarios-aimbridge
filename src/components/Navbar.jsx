@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 import inventarioIcon from "../assets/inventory.png"
 import directorioIcon from "../assets/directory.png"
+import AimbridgeLogo from "../assets/Aimbridge_LATAM_Color.png"
+import AColor from "../assets/A2.png"
 
 const BotonCollapse = styled.button`
 background-color: white;
@@ -17,74 +19,62 @@ cursor: pointer;
 const IconoInventario = styled.img`
   width: 20px;
 `
-const WrapperInventario = styled.div`
-  display: flex;
-  flex-direction: row;
+const Logo = styled.img`
+  width: 200px;
+  margin-left: 27px;
+  background-repeat: no-repeat;
 `
-
+const ALogo = styled.img`
+width: 90px;
+`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
 `
 const Navbar = () => {
-  const [expand, setExpand] = useState(false)
+  const [expand, setExpand] = useState(true)
   const { collapseSidebar } = useProSidebar();
   const expandCollapse = () => {
     expand == false ? setExpand(true):setExpand(false)
   }
 
-  const themes = {
-    light: {
-      sidebar: {
-        backgroundColor: '#ffffff',
-        color: '#607489',
-      },
-      menu: {
-        menuContent: '#fbfcfd',
-        icon: '#0098e5',
-        hover: {
-          backgroundColor: '#c5e4ff',
-          color: '#44596e',
-        },
-        disabled: {
-          color: '#9fb6cf',
-        },
-      },
-    },
-    dark: {
-      sidebar: {
-        backgroundColor: '#0b2948',
-        color: '#8ba1b7',
-      },
-      menu: {
-        menuContent: '#082440',
-        icon: '#59d0ff',
-        hover: {
-          backgroundColor: '#00458b',
-          color: '#b6c8d9',
-        },
-        disabled: {
-          color: '#3e5e7e',
-        },
-      },
-    },
-  };
   return (
     <>
       <Wrapper style={{ display: "flex", height: "100%"}} >
-        <Sidebar collapsedWidth="75px">
-          <Menu  rootStyles={{
+        <Sidebar collapsedWidth="70px">
+          <Menu rootStyles={{
           backgroundColor:"#FFFF"
         }}>
+          {
+            expand == true ? (<Logo src={AimbridgeLogo}></Logo>):(<ALogo src={AColor}></ALogo>)
+          }
+            <SubMenu  label="Inventarios" icon={<IconoInventario src={inventarioIcon}></IconoInventario>}>
+              <MenuItem component={<NavLink to={"/alta"}></NavLink>}>
+                {" "}
+                Alta{" "}
+              </MenuItem>
+              <MenuItem> Line charts </MenuItem>
+            </SubMenu>
+            <SubMenu label="Directorio" icon={<IconoInventario src={directorioIcon}></IconoInventario>}>
+              <MenuItem component={<NavLink to={"/sistemas"}></NavLink>}>Sistemas</MenuItem>
+              <MenuItem component={<NavLink to={"/contabilidad"}></NavLink>}>Contabilidad</MenuItem>
+              <MenuItem component={<NavLink to={"/operaciones"}></NavLink>}>Operaciones</MenuItem>
+              <MenuItem component={<NavLink to={"/rh"}></NavLink>}>Recursos Humanos</MenuItem>
+              <MenuItem component={<NavLink to={"/pt"}></NavLink>}>Prisma Tech</MenuItem>
+            </SubMenu>
+            <SubMenu  label="Bitlocker" icon={<IconoInventario src={inventarioIcon}></IconoInventario>}>
+              <MenuItem component={<NavLink to={"/bitlocker"}></NavLink>}>
+                {" "}
+                Alta{" "}
+              </MenuItem>
+              <MenuItem> Line charts </MenuItem>
+            </SubMenu>
             <SubMenu  label="Inventarios" icon={<IconoInventario src={inventarioIcon}></IconoInventario>}>
               <MenuItem component={<NavLink to={"/inventarios"}></NavLink>}>
                 {" "}
                 Inventarios{" "}
               </MenuItem>
               <MenuItem> Line charts </MenuItem>
-            </SubMenu>
-            <SubMenu label="Directorio" icon={<IconoInventario src={directorioIcon}></IconoInventario>}>
-              <MenuItem component={<NavLink to={"/"}></NavLink>}>WEMTYV</MenuItem>
             </SubMenu>
           </Menu>
         </Sidebar>
@@ -95,7 +85,7 @@ const Navbar = () => {
                 className="material-symbols-outlined"
                 onClick={expandCollapse}
               >
-                {!expand ? "chevron_left" : "chevron_right"}
+                {expand ? "chevron_left" : "chevron_right"}
               </span>
             }
           </BotonCollapse>

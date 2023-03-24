@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "label":"Sistemas y Tecnologia"
+    },
+    {
+        "id":2,
+        "label":"Prisma Tech"
+    },
+    {
+        "id":3,
+        "label":"Contabilidad"
+    },
+    {
+        "id":4,
+        "label":"Operaciones"
+    },
+    {
+        "id":5,
+        "label":"Recursos Humanos"
+    }
+]

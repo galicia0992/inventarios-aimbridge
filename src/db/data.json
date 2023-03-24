@@ -1,0 +1,124 @@
+{
+  "altas": [
+    {
+      "usuario": "yair.galicia",
+      "nombre": "Yair Manuel Galicia Muñiz",
+      "status": "Activo",
+      "hostname": "AH-P121224-LT",
+      "serialNumber": "1PLQ1X2",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Sistemas y Tecnologia",
+      "puesto": "Ingeniero en Sistemas",
+      "id": 1
+    },
+    {
+      "usuario": "alberto.aguirre",
+      "nombre": "ALBERTO ISRAEL AGUIRRE HERNANDEZ",
+      "status": "Activo",
+      "hostname": "AH-P118425-LT",
+      "serialNumber": "4R091Z2",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Contabilidad",
+      "puesto": "Sub Contralor de Operaciones",
+      "id": 2
+    },
+    {
+      "usuario": "alma.garza",
+      "nombre": "ALMA DANIELA GARZA GONZALEZ",
+      "status": "Activo",
+      "hostname": "AH-P118929-LT",
+      "serialNumber": "8KVPWG3",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Operaciones",
+      "puesto": "Coordinacion administrativa",
+      "id": 3
+    },
+    {
+      "usuario": "lorena.cerda",
+      "nombre": "CERDA KIPPER LORENA IVETTE",
+      "status": "Activo",
+      "hostname": "AH-P117754-LT",
+      "serialNumber": "7KVPWG3",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Recursos Humanos",
+      "puesto": "Jefe de atraccion de talento humano",
+      "id": 4
+    },
+    {
+      "usuario": "rodrigo.cantu",
+      "nombre": "CANTU HERNANDEZ RODRIGO ALEJANDRO",
+      "status": "Activo",
+      "hostname": "AH-P118585-LT",
+      "serialNumber": "B36FVT2",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Prisma Tech",
+      "puesto": "Data Miner",
+      "id": 5
+    },
+    {
+      "usuario": "leslie.rodriguez",
+      "nombre": "LESLIE ADRIANA RODRIGUEZ PEQUEÑO",
+      "status": "Activo",
+      "hostname": "AH-P121552-LT",
+      "serialNumber": "2P691Z2 ",
+      "oficina": "Aimbridge",
+      "dominio": "Prisma",
+      "area": "Sistemas y Tecnologia",
+      "puesto": "Ingeniero en Sistemas",
+      "id": 6
+    },
+    {
+      "usuario": "cesar.perez",
+      "nombre": "PEREZ VERASTEGUI CESAR ENRIQUE",
+      "status": "Activo",
+      "hostname": "AH-P105978-LT",
+      "serialNumber": "6SQHNF2",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Sistemas y Tecnologia",
+      "puesto": "Coordinador Soporte Oficinas",
+      "id": 7
+    },
+    {
+      "usuario": "rodrigo.aguilar",
+      "nombre": "RODRIGO AGUILAR HERNANDEZ",
+      "status": "Activo",
+      "hostname": "AH-P120204-LT",
+      "serialNumber": "GQBRYY2",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Sistemas y Tecnologia",
+      "puesto": "Gerente de Sistemas y Tecnologia",
+      "id": 8
+    },
+    {
+      "usuario": "prueba",
+      "nombre": "prueba",
+      "status": "Activo",
+      "hostname": "prueba",
+      "serialNumber": "prueba",
+      "oficina": "Aimbridge",
+      "dominio": "Prisma",
+      "area": "Prisma Tech",
+      "puesto": "Data Miner",
+      "id": 9
+    },
+    {
+      "usuario": "kjkj",
+      "nombre": "kjkjk",
+      "status": "Inactivo",
+      "hostname": "kjhjhjh",
+      "serialNumber": "jhjhj",
+      "oficina": "Aimbridge",
+      "dominio": "Prisma",
+      "area": "Prisma Tech",
+      "puesto": "Data Miner",
+      "id": 10
+    }
+  ]
+}

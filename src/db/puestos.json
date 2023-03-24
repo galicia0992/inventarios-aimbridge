@@ -1,0 +1,58 @@
+[
+    {
+        "id":1,
+        "puesto":"Sistemas y Tecnologia",
+        "label":"Ingeniero en Sistemas"
+    },
+    {
+        "id":2,
+        "puesto":"Sistemas y Tecnologia",
+        "label":"Gerente de Sistemas y Tecnologia"
+    },
+    {
+        "id":3,
+        "puesto":"Sistemas y Tecnologia",
+        "label":"Coordinador Soporte Oficinas"
+    },
+    {
+        "id":4,
+        "puesto":"Contabilidad",
+        "label":"Contralor"
+    },
+    {
+        "id":5,
+        "puesto":"Contabilidad",
+        "label":"Sub Contralor de Operaciones"
+    },
+    {
+        "id":6,
+        "puesto":"Contabilidad",
+        "label":"Practicante Ingresos"
+    },
+    {
+        "id":7,
+        "puesto":"Operaciones",
+        "label":"Coordinacion administrativa"
+    },
+    {
+        "id":8,
+        "puesto":"Recursos Humanos",
+        "label":"Jefe de atraccion de talento humano"
+    },
+    {
+        "id":9,
+        "puesto":"Recursos Humanos",
+        "label":"Coordinador de atraccion del talento"
+    },
+    {
+        "id":10,
+        "puesto":"Prisma Tech",
+        "label":"Data Miner"
+    }
+    ,
+    {
+        "id":11,
+        "puesto":"Prisma Tech",
+        "label":"Full Stack Developer"
+    }
+]
