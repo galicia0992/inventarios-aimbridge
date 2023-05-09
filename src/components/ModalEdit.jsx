@@ -7,9 +7,7 @@ import Modificar from './Modificar';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
 
-const ModalEdit = ({setModal, modal, registros}) => {
-  console.log(registros)
-  const [skeleton, setSkeleton] = useState(false)
+const ModalEdit = ({setModal, modal, registros, skeleton}) => {
   const style = {
     position: 'absolute',
     display: "flex",
@@ -24,10 +22,15 @@ const ModalEdit = ({setModal, modal, registros}) => {
     p: 2,
   };
   const skeletonStyle = {
-    display:"flex",
+    position: 'absolute',
+    display: "flex",
     flexWrap:"wrap",
-    width: 900,
-    height: 500,
+    justifyContent:"start",
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    height: 400,
+    width:500
   }
   
   
@@ -49,23 +52,20 @@ const ModalEdit = ({setModal, modal, registros}) => {
         <Fade in={modal}>
           <Box sx={style}>
             {
-              skeleton ? <Modificar
+              skeleton == false ? <Modificar
               registros={registros}
               setModal={setModal}
               ></Modificar>:
-              <div className="d-flex flex-column align-items-center w-100">
-                <Stack spacing={1} sx={style}>
-              <Skeleton variant="text" width={210} height={70} sx={{ fontSize: '1rem' }} />
-              <Skeleton variant="text" width={210} height={70} sx={{ fontSize: '1rem' }} />
-              <Skeleton variant="text" width={210} height={70} sx={{ fontSize: '1rem' }} />
-              <Skeleton variant="text" width={210} height={70} sx={{ fontSize: '1rem' }} />
-              <Skeleton variant="text" width={210} height={70} sx={{ fontSize: '1rem' }} />
-              <Skeleton variant="text" width={210} height={70} sx={{ fontSize: '1rem' }} />
-              <Skeleton variant="text" width={210} height={70} sx={{ fontSize: '1rem' }} />
-              <Skeleton variant="text" width={210} height={70} sx={{ fontSize: '1rem' }} />
-              <Skeleton variant="text" width={210} height={70} sx={{ fontSize: '1rem' }} />
+              <Stack spacing={1} sx={skeletonStyle} >
+              <Skeleton variant="text" width={210} height={75} sx={{ fontSize: '1rem' }} />
+              <Skeleton variant="text" width={210} height={75} sx={{ fontSize: '1rem' }} />
+              <Skeleton variant="text" width={210} height={75} sx={{ fontSize: '1rem' }} />
+              <Skeleton variant="text" width={210} height={75} sx={{ fontSize: '1rem' }} />
+              <Skeleton variant="text" width={210} height={75} sx={{ fontSize: '1rem' }} />
+              <Skeleton variant="text" width={220} height={75} sx={{ fontSize: '1rem' }} />
+              <Skeleton variant="text" width={220} height={75} sx={{ fontSize: '1rem' }} />
+              <Skeleton variant="text" width={220} height={75} sx={{ fontSize: '1rem' }} />
               </Stack>
-              </div>
             }
           </Box>
         </Fade>

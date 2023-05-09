@@ -11,23 +11,19 @@ import { Button } from "@mui/material";
 import { InputLabel } from "@mui/material";
 import { FormControl } from "@mui/material";
 import AreaEdit from "./AreaEdit";
-import PuestoSistemas from "./PuestoSistemas";
-import PuestoContabilidad from "./PuestoContabilidad";
-import PuestoOperaciones from "./PuestoOperaciones";
-import PuestoRh from "./PuestoRh";
-import PuestoPt from "./PuestoPt";
+import {cambios} from "../api/cambio.js"
 
 const Modificar = ({registros, setModal}) => {
-  const [usuario, setUsuario] = useState("");
-  const [nombre, setNombre] = useState("");
-  const [status, setStatus] = useState("");
-  const [hostname, setHostname] = useState("");
-  const [serialNumber, setSerialNumber] = useState("");
-  const [oficina, setOficina] = useState("");
-  const [dominio, setDominio] = useState("");
-  const [area, setArea] = useState("");
-  const [puesto, setPuesto] = useState("");
-  const [compArea, setCompArea] = useState("");
+  const [usuario, setUsuario] = useState(registros.usuario);
+  const [nombre, setNombre] = useState(registros.nombre);
+  const [status, setStatus] = useState(registros.status);
+  const [hostname, setHostname] = useState(registros.hostname);
+  const [serialNumber, setSerialNumber] = useState(registros.serialNumber);
+  const [oficina, setOficina] = useState(registros.oficina);
+  const [dominio, setDominio] = useState(registros.dominio);
+  const [id] = useState(registros.id)
+  const [area, setArea] = useState(registros.area);
+  const [area2, setArea2] = useState(registros.area)
   const [colorUsuario, setColorUsuario] = useState("");
   const [colorNombre, setColorNombre] = useState("");
   const [colorStatus, setColorStatus] = useState("");
@@ -36,21 +32,6 @@ const Modificar = ({registros, setModal}) => {
   const [colorOficina, setColorOficina] = useState("");
   const [colorDominio, setColorDominio] = useState("");
   const [spinner, setSpinner] = useState(false);
-  
-  
-  useEffect(() => {
-    console.log(registros)
-    setUsuario(registros.usuario)
-    setNombre(registros.nombre);
-    setStatus(registros.status);
-    setHostname(registros.hostname);
-    setSerialNumber(registros.serialNumber);
-    setOficina(registros.oficina);
-    setDominio(registros.dominio);
-    setArea(registros.area);
-    setPuesto(registros.puesto)
-  }, [registros])
-  
   
   const objAlta = {
     usuario,
@@ -61,7 +42,7 @@ const Modificar = ({registros, setModal}) => {
     oficina,
     dominio,
     area,
-    puesto,
+    id
   };
   
     
@@ -100,7 +81,6 @@ const Modificar = ({registros, setModal}) => {
   };
   const alta = () => {
     if (Object.values(objAlta).some((x) => x === "")) {
-      console.log(objAlta)
       Swal.fire({
         icon: "error",
         title: "Oops...",
@@ -109,7 +89,7 @@ const Modificar = ({registros, setModal}) => {
       });
       setModal(false)
     } else {
-      console.log(objAlta)
+      cambios(objAlta)
       setSpinner(true);
       setTimeout(() => {
         setModal(false)
@@ -301,36 +281,11 @@ const Modificar = ({registros, setModal}) => {
               </Select>
             </FormControl>
           )}
-          <AreaEdit setArea={setArea} setCompArea={setCompArea} area={registros.area}></AreaEdit>
-          {area == "Sistemas y Tecnologia" ? (
-            <PuestoSistemas
-              compArea={compArea}
-              setPuesto={setPuesto}
-              puesto={registros.puesto}
-            ></PuestoSistemas>
-          ) : area == "Contabilidad" ? (
-            <PuestoContabilidad
-              compArea={compArea}
-              setPuesto={setPuesto}
-              puesto={registros.puesto}
-            ></PuestoContabilidad>
-          ) : area == "Operaciones" ? (
-            <PuestoOperaciones
-              compArea={compArea}
-              setPuesto={setPuesto}
-              puesto={registros.puesto}
-            ></PuestoOperaciones>
-          ) : area == "Recursos Humanos" ? (
-            <PuestoRh compArea={compArea} setPuesto={setPuesto} puesto={registros.puesto}></PuestoRh>
-          ) : area == "Prisma Tech" ? (
-            <PuestoPt compArea={compArea} setPuesto={setPuesto} puesto={registros.puesto}></PuestoPt>
-          ) : (
-            ""
-          )}
+          <AreaEdit setArea={setArea} area={area2}></AreaEdit>
         </Container>
         {!spinner ? (
           <Button variant="outlined" onClick={alta} className="w-25">
-            Alta
+            Siguiente
           </Button>
         ) : (
           <HashLoader color="#275baf" size={40} speedMultiplier={2} />

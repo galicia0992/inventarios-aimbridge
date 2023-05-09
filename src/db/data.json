@@ -1,18 +1,6 @@
 {
   "altas": [
     {
-      "usuario": "yair.galicia",
-      "nombre": "Yair Manuel Galicia Muñiz",
-      "status": "Activo",
-      "hostname": "AH-P121224-LT",
-      "serialNumber": "1PLQ1X2",
-      "oficina": "Aimbridge",
-      "dominio": "Aimbridge",
-      "area": "Sistemas y Tecnologia",
-      "puesto": "Ingeniero en Sistemas",
-      "id": 1
-    },
-    {
       "usuario": "alberto.aguirre",
       "nombre": "ALBERTO ISRAEL AGUIRRE HERNANDEZ",
       "status": "Activo",
@@ -68,33 +56,8 @@
       "serialNumber": "2P691Z2 ",
       "oficina": "Aimbridge",
       "dominio": "Prisma",
-      "area": "Sistemas y Tecnologia",
-      "puesto": "Ingeniero en Sistemas",
+      "area": "Sistemas y Tecnologia - Coordinador Soporte Oficinas",
       "id": 6
-    },
-    {
-      "usuario": "cesar.perez",
-      "nombre": "PEREZ VERASTEGUI CESAR ENRIQUE",
-      "status": "Activo",
-      "hostname": "AH-P105978-LT",
-      "serialNumber": "6SQHNF2",
-      "oficina": "Aimbridge",
-      "dominio": "Aimbridge",
-      "area": "Sistemas y Tecnologia",
-      "puesto": "Coordinador Soporte Oficinas",
-      "id": 7
-    },
-    {
-      "usuario": "rodrigo.aguilar",
-      "nombre": "RODRIGO AGUILAR HERNANDEZ",
-      "status": "Activo",
-      "hostname": "AH-P120204-LT",
-      "serialNumber": "GQBRYY2",
-      "oficina": "Aimbridge",
-      "dominio": "Aimbridge",
-      "area": "Sistemas y Tecnologia",
-      "puesto": "Gerente de Sistemas y Tecnologia",
-      "id": 8
     },
     {
       "usuario": "prueba",
@@ -119,6 +82,50 @@
       "area": "Prisma Tech",
       "puesto": "Data Miner",
       "id": 10
+    },
+    {
+      "usuario": "ree",
+      "nombre": "kkk",
+      "status": "Activo",
+      "hostname": "kdk",
+      "serialNumber": "kdkd",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Prisma Tech - Data Miner",
+      "id": 11
+    },
+    {
+      "usuario": "iuhuhu",
+      "nombre": "huhuhu",
+      "status": "Activo",
+      "hostname": "huhhuh",
+      "serialNumber": "uhuh",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Prisma Tech - Practicante de desarrollo",
+      "id": 13
+    },
+    {
+      "usuario": "yair.galicia",
+      "nombre": "YAIR MANUEL GALICIA MUÑIZ",
+      "status": "Activo",
+      "hostname": "AH-P121244-LT",
+      "serialNumber": "H767SJH",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Prisma Tech - Data Miner",
+      "id": 14
+    },
+    {
+      "usuario": "yair.galicia",
+      "nombre": "yair manuel galicia muñiz",
+      "status": "Activo",
+      "hostname": "AH-P121244-LT",
+      "serialNumber": "SDJSK2",
+      "oficina": "Aimbridge",
+      "dominio": "Aimbridge",
+      "area": "Prisma Tech - Data Miner",
+      "id": 15
     }
   ]
 }

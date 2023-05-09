@@ -11,11 +11,6 @@ import { InputLabel } from "@mui/material";
 import { FormControl } from "@mui/material";
 import Area from "./Area";
 import { altaRegistro } from "../api/alta.js";
-import PuestoSistemas from "./PuestoSistemas";
-import PuestoContabilidad from "./PuestoContabilidad";
-import PuestoOperaciones from "./PuestoOperaciones";
-import PuestoRh from "./PuestoRh";
-import PuestoPt from "./PuestoPt";
 
 const AltaLap = () => {
   const [usuario, setUsuario] = useState("".toUpperCase());
@@ -26,8 +21,6 @@ const AltaLap = () => {
   const [oficina, setOficina] = useState("");
   const [dominio, setDominio] = useState("");
   const [area, setArea] = useState("");
-  const [puesto, setPuesto] = useState("");
-  const [compArea, setCompArea] = useState("");
   const [colorUsuario, setColorUsuario] = useState("");
   const [colorNombre, setColorNombre] = useState("");
   const [colorStatus, setColorStatus] = useState("");
@@ -45,8 +38,7 @@ const AltaLap = () => {
     serialNumber,
     oficina,
     dominio,
-    area,
-    puesto,
+    area
   };
   const handleUsuario = (e) => {
     setUsuario(e.target.value);
@@ -261,29 +253,7 @@ const AltaLap = () => {
               </Select>
             </FormControl>
           )}
-          <Area setArea={setArea} setCompArea={setCompArea} area={area}></Area>
-          {area == "Sistemas y Tecnologia" ? (
-            <PuestoSistemas
-              compArea={compArea}
-              setPuesto={setPuesto}
-            ></PuestoSistemas>
-          ) : area == "Contabilidad" ? (
-            <PuestoContabilidad
-              compArea={compArea}
-              setPuesto={setPuesto}
-            ></PuestoContabilidad>
-          ) : area == "Operaciones" ? (
-            <PuestoOperaciones
-              compArea={compArea}
-              setPuesto={setPuesto}
-            ></PuestoOperaciones>
-          ) : area == "Recursos Humanos" ? (
-            <PuestoRh compArea={compArea} setPuesto={setPuesto}></PuestoRh>
-          ) : area == "Prisma Tech" ? (
-            <PuestoPt compArea={compArea} setPuesto={setPuesto}></PuestoPt>
-          ) : (
-            ""
-          )}
+          <Area setArea={setArea} area={area}></Area>
         </Container>
         {!spinner ? (
           <Button variant="outlined" onClick={alta} className="w-25">

@@ -6,7 +6,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { Button } from "@mui/material";
 import { ButtonGroup } from "@mui/material";
 import { llamada } from "../api/llamada";
-import { HashLoader } from "react-spinners";
+import { eliminar } from "../api/eliminar";
 import ModalEdit from "../components/ModalEdit";
 import Swal from "sweetalert2";
 
@@ -14,19 +14,18 @@ const Sistemas = () => {
   const { data } = useLoaderData();
   const [rowSelectionModel, setRowSelectionModel] = useState([]);
   const [modal, setModal] = useState(false);
-  const [spinner, setSpinner] = useState(false);
+  const [skeleton, setSkeleton] = useState(false)
   const [registros, setRegistros] = useState([]);
   const arr = [];
 
   const llamarRegistro = async (id) => {
     const response = await llamada(id);
     setRegistros(response);
-    setModal(true);
-    setSpinner(false);
+    setSkeleton(false)
   };
 
   data.map((item) => {
-    item.area == "Sistemas y Tecnologia" ? arr.push(item) : "";
+    item.area.includes("Sistemas y Tecnologia") ? arr.push(item) : "";
   });
   const verificar = () => {
     if (rowSelectionModel.length > 1) {
@@ -44,13 +43,18 @@ const Sistemas = () => {
         footer: '<a href="">Why do I have this issue?</a>',
       });
     } else {
-      setSpinner(true);
+      setSkeleton(true)
+      setModal(true)
       setTimeout(() => {
         llamarRegistro(rowSelectionModel);
       }, 3000);
     }
   };
-
+  const borrar = () =>{
+    rowSelectionModel.map(item =>{
+      eliminar(item)
+    })
+  }
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
@@ -100,13 +104,7 @@ const Sistemas = () => {
       headerName: "Area",
       width: 150,
       editable: true,
-    },
-    {
-      field: "puesto",
-      headerName: "Puesto",
-      width: 150,
-      editable: true,
-    },
+    }
   ];
   return (
     <>
@@ -142,19 +140,18 @@ const Sistemas = () => {
             }}
           >
             <ButtonGroup variant="text" aria-label="text button group">
-              <Button onClick={verificar}>Eliminar</Button>
+              <Button onClick={borrar}>Eliminar</Button>
               <Button onClick={verificar}>Edit</Button>
             </ButtonGroup>
           </Box>
-          {!spinner ? (
+          
             <ModalEdit
               setModal={setModal}
               modal={modal}
               registros={registros}
+              skeleton={skeleton}
             ></ModalEdit>
-          ) : (
-            <HashLoader color="#275baf" size={40} speedMultiplier={2} />
-          )}
+          
         </Box>
       </div>
     </>
@@ -165,6 +162,6 @@ export default Sistemas;
 export const loaderSistemas = async () => {
   const response = await fetch("http://localhost:3000/altas");
   const data = await response.json();
-
+console.log("hola")
   return { data };
 };

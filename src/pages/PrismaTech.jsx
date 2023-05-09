@@ -26,7 +26,7 @@ const PrismaTech = () => {
   };
 
   data.map((item) => {
-    item.area == "Prisma Tech" ? arr.push(item) : "";
+    item.area.includes("Prisma Tech") ? arr.push(item) : "";
   });
   const verificar = () => {
     if (rowSelectionModel.length > 1) {

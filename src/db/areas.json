@@ -1,22 +1,47 @@
 [
     {
         "id":1,
-        "label":"Sistemas y Tecnologia"
+        "label":"Sistemas y Tecnologia - Ingeniero en Sistemas"
     },
     {
         "id":2,
-        "label":"Prisma Tech"
+        "label":"Sistemas y Tecnologia - Gerente de Sistemas y Tecnologia"
     },
     {
         "id":3,
-        "label":"Contabilidad"
+        "label":"Sistemas y Tecnologia - Coordinador Soporte Oficinas"
     },
     {
         "id":4,
-        "label":"Operaciones"
+        "label":"Prisma Tech - Data Miner"
     },
     {
         "id":5,
-        "label":"Recursos Humanos"
+        "label":"Prisma Tech - Practicante de desarrollo"
+    },
+    {
+        "id":6,
+        "label":"Contabilidad - Contralor"
+    },
+    {
+        "id":7,
+        "label":"Contabilidad - Sub Contralor de Operaciones"
+    },
+    {
+        "id":8,
+        "label":"Contabilidad - Practicante de Ingresos"
+    },
+    {
+        "id":9,
+        "label":"Operaciones - Coordinacion administrativa"
+    },
+    {
+        "id":10,
+        "label":"Recursos Humanos - Jefe de Atraccion del Talento"
+    },
+    {
+        "id":11,
+        "label":"Recursos Humanos - Coordinador de Atraccion del Talento"
     }
+    
 ]

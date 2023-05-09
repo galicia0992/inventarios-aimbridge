@@ -2,11 +2,10 @@ import React from "react";
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import areas from "../db/areas.json";
-const Area = ({setArea, setCompArea}) => {
+const Area = ({setArea}) => {
   
     const handleArea = ({inputProps}) =>{
         setArea(inputProps.value)
-        setCompArea(inputProps.value)
     }
   return (
     <Autocomplete

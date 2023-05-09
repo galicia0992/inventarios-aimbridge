@@ -4,7 +4,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import puestos from "../db/puestos.json";
 const PuestoSistemas = ({ setPuesto, puesto }) => {
   const arrSistemas = puestos.filter(
-    (item) => item.puesto == "Sistemas y Tecnologia"
+    (item) => item.puesto.includes("Sistemas y Tecnologia")
   );
 
   const handlePuesto = ({ inputProps }) => {
